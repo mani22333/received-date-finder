@@ -87,6 +87,7 @@ other dates. The default reports AMBIGUOUS and mentions this as a hint (sample `
 ## Reports (`output/`, copy of `test_report.csv` in the repo root)
 
 * `test_report.csv`: `test_id, filename, scenario, expected_result, actual_result, status, error_message`
+* `received_dates.csv`: just `filename, received_date` (date is `YYYY-MM-DD`, blank when no date can be given)
 * `extraction_report.csv`: `filename, extracted_date, status, original_date_text, location, reason` (one row per manuscript)
 
 ## Known limitations

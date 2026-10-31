@@ -24,3 +24,9 @@ def write_extraction_report(results, path):
 
 def write_test_report(rows, path):
     _write(path, TEST_COLUMNS, rows)
+
+
+def write_simple_report(results, path):
+    """Two columns only: filename, received_date (blank when no date could be given)."""
+    _write(path, ["filename", "received_date"],
+           [{"filename": r.filename, "received_date": r.date} for r in results])

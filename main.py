@@ -11,7 +11,7 @@ from pathlib import Path
 
 from src.config import DEFAULT_POLICY, EXIT_CODES, SUCCESS
 from src.date_extractor import ExtractionResult, extract_received_date
-from src.report_generator import write_extraction_report, write_test_report
+from src.report_generator import write_extraction_report, write_simple_report, write_test_report
 
 
 def process_folder(folder: Path):
@@ -48,9 +48,10 @@ def main(argv=None) -> int:
     if target.is_dir():
         results = process_folder(target)
         write_extraction_report(results, out_dir / "extraction_report.csv")
+        write_simple_report(results, out_dir / "received_dates.csv")
         for r in results:
             print(f"{r.filename}\t{r.status}\t{r.date}")
-        print(f"{len(results)} file(s) processed -> {out_dir / 'extraction_report.csv'}", file=sys.stderr)
+        print(f"{len(results)} file(s) processed -> {out_dir / 'received_dates.csv'} and extraction_report.csv", file=sys.stderr)
         return 0
 
     r: ExtractionResult = extract_received_date(target)

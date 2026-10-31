@@ -42,6 +42,10 @@ class SampleTests(unittest.TestCase):
             lines = (Path(out) / "extraction_report.csv").read_text(encoding="utf-8").strip().splitlines()
             self.assertEqual(len(lines) - 1, len(list(INPUT.glob("*.docx"))))
             self.assertEqual(lines[0], "filename,extracted_date,status,original_date_text,location,reason")
+            simple = (Path(out) / "received_dates.csv").read_text(encoding="utf-8").strip().splitlines()
+            self.assertEqual(simple[0], "filename,received_date")
+            self.assertEqual(simple[1], "merged_01.docx,2026-01-02")
+            self.assertEqual(len(simple), len(lines))
 
 
 class CommandLineTests(unittest.TestCase):
