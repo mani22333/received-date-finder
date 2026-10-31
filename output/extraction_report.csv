@@ -1,0 +1,21 @@
+filename,extracted_date,status,original_date_text,location,reason
+merged_01.docx,2026-01-02,SUCCESS,2 Jan 2026,body (paragraph 6),found after label 'Received'
+merged_02.docx,2026-01-02,SUCCESS,2 January 2026,body (paragraph 83),found after label 'Received'
+merged_03.docx,2026-01-02,SUCCESS,2 Jan 2026,body (paragraph 6),found after label 'Received'
+merged_04.docx,2026-01-02,SUCCESS,2 January 2026,body (paragraph 87),found after label 'Received'
+merged_05.docx,,AMBIGUOUS,03/04/2026,body (paragraph 6),'03/04/2026' could be 2026-04-03 (day-first) or 2026-03-04 (month-first)
+merged_06.docx,,AMBIGUOUS,03/04/2026,body (paragraph 17),"'03/04/2026' could be 2026-04-03 (day-first) or 2026-03-04 (month-first) (hint only, not applied: 2026-03-04 is the only reading consistent with the other dates)"
+merged_07.docx,,AMBIGUOUS,03/04/2026,body (paragraph 83),'03/04/2026' could be 2026-04-03 (day-first) or 2026-03-04 (month-first)
+merged_08.docx,,NOT_FOUND,,,no received-date label with a date was found (only other labelled dates present: accepted)
+merged_09.docx,,NOT_FOUND,,,no received-date label with a date was found (only other labelled dates present: accepted)
+merged_10.docx,2026-01-02,SUCCESS,2 Jan 2026,body (paragraph 11),found after label 'Received'
+merged_11.docx,2026-01-02,SUCCESS,2 Jan 2026,body (paragraph 6),found after label 'Received'
+merged_12.docx,,FILE_ERROR,,,file is corrupt or not a .docx: it is not a ZIP package (a .docx must start with 'PK')
+merged_13.docx,2026-01-02,SUCCESS,2 Jan 2026,header (paragraph 1),found after label 'Received'
+merged_14.docx,2026-01-02,SUCCESS,2 January 2026,body (paragraph 6),found after label 'Received'
+merged_15.docx,2026-01-02,SUCCESS,2026-01-02,body/table (paragraph 17) -> body/table (paragraph 18),found after label 'Received'
+merged_16.docx,2026-01-02,SUCCESS,2 Jan 2026,body (paragraph 6),found after label 'Received'
+merged_17.docx,2026-01-02,SUCCESS,2 Jan 2026,body (paragraph 87),found after label 'Received'
+merged_18.docx,,AMBIGUOUS,12/05/26,body (paragraph 6),'12/05/26' could be 2026-05-12 (day-first) or 2026-12-05 (month-first)
+merged_19.docx,,INVALID_DATE,31/04/2026,body (paragraph 17),'31/04/2026' is not a real calendar date in day-first or month-first order
+merged_20.docx,2026-01-02,SUCCESS,2nd January 2026,body (paragraph 27),found after label 'Received'
