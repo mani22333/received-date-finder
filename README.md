@@ -98,3 +98,14 @@ other dates. The default reports AMBIGUOUS and mentions this as a hint (sample `
 * Text boxes in older VML-only files and fields (`w:fldSimple` results) are read when their text is in `w:t`; field codes are ignored.
 * A label with no `:`/`-` before a short non-date phrase (e.g. "Received funding.") is treated as prose and ignored.
 * Password-protected files are reported as FILE_ERROR (they cannot be read), not decrypted.
+
+## Website (upload files, see dates)
+
+```bash
+pip install -r requirements.txt
+python app.py          # then open http://127.0.0.1:5000
+```
+
+Choose one or many `.docx` files, click **Find received dates**, read the table (file, date as `YYYY-MM-DD`, status, details) and
+optionally download it as CSV. It uses the same extractor as `main.py`. Files are processed in a temporary folder and deleted afterwards.
+It is meant for local use (127.0.0.1), not for the public internet.
